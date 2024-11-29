@@ -13,8 +13,14 @@ class _LeaveapplyState extends State<Leaveapply> {
     return Scaffold(
       body: Column(
         children: [
-          Center(child: Text('Sagar salunke'),),
-          ElevatedButton(onPressed: (){}, child: Text("Go to Home"))
+          Center(
+            child: Text('Sagar salunke'),
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed("/");
+              },
+              child: Text("Go to Home"))
         ],
       ),
     );

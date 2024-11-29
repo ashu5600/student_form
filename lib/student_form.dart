@@ -1,5 +1,6 @@
 // student_form/lib/student_form.dart
 import 'package:flutter/material.dart';
+import 'package:student_form/Apply/LeaveApply.dart';
 export 'package:student_form/Apply/LeaveApply.dart';
 
 class StudentForm extends StatelessWidget {
@@ -12,13 +13,27 @@ class StudentForm extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Student Form")),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            var d = Navigator.pushNamed(context, "/");
-            // Use the callback to navigate to a page in the main app
-            // navigateToMainAppPage('/details');
-          },
-          child: Text("Go to Main App Ashutosh Page"),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                var d = Navigator.pushNamed(context, "/");
+                // Use the callback to navigate to a page in the main app
+                // navigateToMainAppPage('/details');
+              },
+              child: Text("Go to Main App Ashutosh Page"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => Leaveapply(),
+                ));
+                // Use the callback to navigate to a page in the main app
+                // navigateToMainAppPage('/details');
+              },
+              child: Text("Go to Sagar Page"),
+            ),
+          ],
         ),
       ),
     );
