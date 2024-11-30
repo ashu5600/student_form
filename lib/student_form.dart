@@ -11,7 +11,7 @@ class StudentForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Student Form")),
+      appBar: AppBar(title: const Text("Student Form")),
       body: Center(
         child: Column(
           children: [
@@ -21,17 +21,27 @@ class StudentForm extends StatelessWidget {
                 // Use the callback to navigate to a page in the main app
                 // navigateToMainAppPage('/details');
               },
-              child: Text("Go to Main App Ashutosh Page"),
+              child: const Text("Go to Main App Ashutosh Page"),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => Leaveapply(),
+                  builder: (context) => const Leaveapply(),
                 ));
                 // Use the callback to navigate to a page in the main app
                 // navigateToMainAppPage('/details');
               },
-              child: Text("Go to Sagar Page"),
+              child: const Text("Go to Sagar Page"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const Leaveapply(),
+                ));
+                // Use the callback to navigate to a page in the main app
+                // navigateToMainAppPage('/details');
+              },
+              child: const Text("Go to Krishna Page"),
             ),
           ],
         ),
