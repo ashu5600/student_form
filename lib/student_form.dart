@@ -15,6 +15,7 @@ class StudentForm extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            Image.asset("asset/app_logo.png"),
             ElevatedButton(
               onPressed: () {
                 var d = Navigator.pushNamed(context, "/");
